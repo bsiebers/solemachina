@@ -1,0 +1,28 @@
+<?php
+$pdo = new PDO('mysql:host=localhost;dbname=pizzadatabase', 'pizzaadmin', 'admin');
+$username = $_POST['username'];
+$password = $_POST['password'];
+
+$passwordConfirm = $_POST['password_confirm'];
+if($password !== $passwordConfirm) {
+    echo "Wachtwoorden komen niet overeen.";
+    exit;
+}
+
+$check = $pdo->prepare('SELECT * FROM users where username = ?');
+$check->execute([$username]);
+if($check->rowCount() > 0) {
+    echo "Gebruikersnaam bestaat al, kies een andere.";
+    exit;
+}
+
+$stmt = $pdo->prepare('INSERT into users (username, password) VALUES (?, ?)');
+$hash = password_hash($password, PASSWORD_DEFAULT);
+$stmt->execute([$username, $hash]);
+
+if($stmt->rowCount() > 0) {
+    echo "Registratie succesvol!";
+} else {
+    echo "Registratie mislukt.";
+}
+?>
