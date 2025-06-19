@@ -87,22 +87,17 @@ body {
   opacity: 75%;
 }
 
-
-body {
-  background-color: black;
-}
-
 main {
-  background: white;
+  background: black;
   color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .main-content {
   background-color: white;
   color: black;
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
 }
 
 .hero-banner {
@@ -110,14 +105,19 @@ main {
   justify-content: center;
 }
 
-.banner-image {
-  height: auto;
-  width: 100%;
+#over-ons {
+  display: flex;
+  justify-content: center;
 }
 
-#over-ons {
-  padding: 2rem 1.5rem;
-  line-height: 1.6;
+.over-ons-content {
+  display: flex;
+  justify-content: center;
+}
+
+.banner-image {
+  height: 400px;
+  width: 800px;
 }
 
 footer {

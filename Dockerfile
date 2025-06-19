@@ -1,7 +1,7 @@
 FROM php:8.1-apache
 
-# Activeer mod_rewrite
-RUN a2enmod rewrite
+# Activeer mod_rewrite en staat include toe
+RUN a2enmod rewrite include
 
 # Basis tools en dev-libs
 RUN apt-get update && apt-get install -y \
