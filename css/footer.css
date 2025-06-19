@@ -1,0 +1,12 @@
+footer {
+  height: 300px;
+  background-color: black;
+}
+
+.footbar {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  background: black;
+  color: white;
+}

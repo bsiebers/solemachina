@@ -3,32 +3,16 @@
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" href="../css/normalize.css">
-        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/base.css">
+        <link rel="stylesheet" href="../css/header.css">
+        <link rel="stylesheet" href="../css/footer.css">
+        <link rel="stylesheet" href="../css/main-index.css">
         <title>Pizzeria Sole Machina</title>
     </head>
 
     <body>
-       <header>
-        <div class="navbar">
-         <div class="logo">
-             <a href="home.html"><img class="logo-img" src="../public/images/logo.png" alt="Pizzeria Sole Machina Logo"></a>
-         </div>
-         <nav class="nav-links">
-            <a href="menu.html">Menu</a>
-            <a href="#contact">Contact</a>
-            <a href="#over-ons">Over ons</a>
-            <a href="login.html" class="login-link">
-                <img src="../public/images/account.png" alt="Login icoon" class="login-icon">
-                <span>Login</span>
-            </a>
-        </nav>
-     </div>
-    <div class="subbar">
-    <a href="menu.html" class="button">Bestellen</a>
-     </div>
-    </header>
-
-
+  
+<!--#include virtual="/includes/html/header.html" -->
 
         <main>
             <div class="main-content">
@@ -48,19 +32,7 @@
             </div>
         </main>
 
-        <footer>
-            <div class="footbar">
-            <section id="contact">
-            <h2>Contact</h2>
-            <p><strong>Adres:</strong> Via del Forno 23, 1012 AB Amsterdam</p>
-            <p><strong>Telefoon:</strong> 020 - 123 4567</p>
-            <p><strong>E-mail:</strong> info@solemachina.nl</p>
-            <p><strong>Openingstijden:</strong><br>
-             Ma t/m Vr: 12:00 – 22:00<br>
-            Za & Zo: 14:00 – 23:00
-            </p>
-            </section>
-            </div>
-        </footer>
+<!--#include virtual="/includes/html/footer.html" -->
+
     </body>
 </html>

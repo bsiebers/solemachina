@@ -32,5 +32,16 @@ RUN apt-get update && ACCEPT_EULA=Y apt-get install -y \
 # Installeer PHP-extensie via PECL
 RUN pecl install pdo_sqlsrv && docker-php-ext-enable pdo_sqlsrv
 
+# Laat Apache .htaccess gebruiken in /var/www/html/pages + activeer SSI
+RUN echo '<Directory "/var/www/html/pages">\n\
+    AllowOverride All\n\
+    Options +Includes\n\
+    Require all granted\n\
+</Directory>' > /etc/apache2/conf-available/pages-ssi.conf \
+ && a2enconf pages-ssi
+
 # Zet rechten
 RUN chown -R www-data:www-data /var/www/html && chmod -R 755 /var/www/html
+
+COPY . /var/www/html/
+
