@@ -7,7 +7,9 @@
 }
 
 .main-content input[type="email"],
-.main-content input[type="password"] {
+.main-content input[type="password"],
+.main-content input[type="text"],
+.main-content input[type="number"] {
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
@@ -15,14 +17,21 @@
   margin: 15px 0;
 }
 
-.main-content a{
+.wachtwoord-vergeten,
+.privacy-policy {
     display: block;
+    width: fit-content;
     color: orangered;
     text-align: left;
 }
 
-button {
-    margin: 15px 0;
+.wachtwoord-vergeten:hover,
+.privacy-policy:hover {
+    opacity: 0.75;
+}
+
+
+.btn {
   font-size: 20px;
   background-color: orangered;
   color: white;
@@ -30,11 +39,44 @@ button {
   width: 50%;
   text-align: center;
   text-decoration: none;
-  border: 2px solid white;
+  border: none;
   border-radius: 10px;
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 50px;
 }
 
-button:hover {
-  background-color: orangered;
-  opacity: 75%;
+.btn:hover {
+  opacity: 0.75;
 }
+
+.btn-register {
+  margin-top: 10px;
+}
+
+.smallbox {
+  display: grid;
+  grid-template-columns: 40% 20% 40%;
+  grid-template-rows: auto auto;
+  column-gap: 0;
+  margin-top: 15px;
+}
+
+.smallbox input:nth-child(1) {
+   grid-column: 1; grid-row: 1; }
+
+.smallbox input:nth-child(2) {
+   grid-column: 3; grid-row: 1; }
+
+.smallbox input:nth-child(3) {
+   grid-column: 1; grid-row: 2; }
+.smallbox input:nth-child(4) {
+   grid-column: 3; grid-row: 2; }
+
+.voorwaarden-check {
+  display: flex;
+  gap: 10px;
+}
+
+
+

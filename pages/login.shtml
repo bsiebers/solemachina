@@ -22,15 +22,12 @@
 
                 <label for="wachtwoord">Wachtwoord:</label>
                 <input type="password" id="wachtwoord" name="wachtwoord" placeholder="Vul je wachtwoord in" required>
-
-                <div class="wachtwoord-vergeten">
-                    <a href="/wachtwoord-vergeten.shtml">Wachtwoord vergeten</a>
-                </div>
-
-                <button type="submit">Inloggen</button>
+                
+                    <a href="wachtwoord-vergeten.shtml" class="wachtwoord-vergeten">Wachtwoord vergeten</a>
+                <button type="submit" class="btn">Inloggen</button>
                 <p>of</p>
-                <button type="register">Account maken</button>
             </form>
+             <a href="register.shtml" class="btn btn-register">Maak een account aan</a>
             </div>
         </main>
 
