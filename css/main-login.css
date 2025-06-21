@@ -1,0 +1,40 @@
+.main-content {
+  background-color: white;
+  color: black;
+  text-align: center;
+  max-width: 800px;
+  margin: 50px auto;
+}
+
+.main-content input[type="email"],
+.main-content input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin: 15px 0;
+}
+
+.main-content a{
+    display: block;
+    color: orangered;
+    text-align: left;
+}
+
+button {
+    margin: 15px 0;
+  font-size: 20px;
+  background-color: orangered;
+  color: white;
+  padding: 8px;
+  width: 50%;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
+button:hover {
+  background-color: orangered;
+  opacity: 75%;
+}

@@ -1,15 +1,19 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: white;;
+html, body {
+  height: 100%;
+  margin: 0;
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
   background-color: black;
 }
 
 main {
   background: white;
   color: white;
+  flex: 1;
 }
 
 

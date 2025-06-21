@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="nl">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../css/normalize.css">
+        <link rel="stylesheet" href="../css/base.css">
+        <link rel="stylesheet" href="../css/header.css">
+        <link rel="stylesheet" href="../css/footer.css">
+        <link rel="stylesheet" href="../css/main-login.css">
+        <title>Login</title>
+    </head>
+
+    <body>
+  
+<!--#include virtual="/includes/html/header.html" -->
+
+        <main>
+            <div class="main-content">
+            <form method="post" action="/handlelogin.php">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="Vul je e-mail in" required>
+
+                <label for="wachtwoord">Wachtwoord:</label>
+                <input type="password" id="wachtwoord" name="wachtwoord" placeholder="Vul je wachtwoord in" required>
+
+                <div class="wachtwoord-vergeten">
+                    <a href="/wachtwoord-vergeten.shtml">Wachtwoord vergeten</a>
+                </div>
+
+                <button type="submit">Inloggen</button>
+                <p>of</p>
+                <button type="register">Account maken</button>
+            </form>
+            </div>
+        </main>
+
+<!--#include virtual="/includes/html/footer.html" -->
+
+    </body>
+</html>
