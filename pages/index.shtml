@@ -12,7 +12,7 @@
 
     <body>
   
-<!--#include virtual="/includes/html/header.html" -->
+<!--#include virtual="/includes/html/header.php" -->
 
         <main>
             <div class="main-content">
