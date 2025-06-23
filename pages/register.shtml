@@ -12,11 +12,11 @@
 
     <body>
   
-<!--#include virtual="/includes/html/header.php" -->
+<!--#include virtual="/includes/html/header.html" -->
 
         <main>
             <div class="main-content">
-            <form method="post" action="/registratie.php">
+            <form method="post" action="/handleregister.php">
                 <h1>Account maken</h1>
                 <input type="email" name="email" placeholder="E-mailadres" required>
                 <input type="password" name="password" placeholder="Wachtwoord" required>

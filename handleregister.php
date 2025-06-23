@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once 'database/db-connection.php'; 
 
 $db = new Database();
@@ -42,7 +43,7 @@ if ($stmt->execute([$email, $hash, $firstname, $lastname,'klant', $address])) {
         'role' => 'klant'
     ];
     
-    header('Location: pages/index.shtml');
+    header('Location: pages/index.php');
     exit;
 
 } else {
