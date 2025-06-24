@@ -1,23 +1,26 @@
 <?php
 class Database {
-    private $host = 'host.docker.internal'; // zodat Docker 'localhost' op jouw pc bereikt
-    private $database = 'Pizzadatabase';
-    private $username = 'pizzaadmin';
-    private $password = 'admin';
-    public $conn;
+    private static $host = 'host.docker.internal';
+    private static $database = 'Pizzadatabase';
+    private static $username = 'pizzaadmin';
+    private static $password = 'admin';
+    private static $conn;
 
-    public function getConnection() {
+    public static function getConnection() {
         try {
-            $this->conn = new PDO(
-                "sqlsrv:Server={$this->host};Database={$this->database};TrustServerCertificate=1",
-                $this->username,
-                $this->password
-            );
-            $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            if (!self::$conn) {
+                self::$conn = new PDO(
+                    "sqlsrv:Server=" . self::$host . ";Database=" . self::$database . ";TrustServerCertificate=1",
+                    self::$username,
+                    self::$password
+                );
+                self::$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            }
         } catch(PDOException $e) {
             echo "Connection failed: " . $e->getMessage();
         }
-        return $this->conn;
+
+        return self::$conn;
     }
 }
 ?>

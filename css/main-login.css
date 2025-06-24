@@ -30,26 +30,6 @@
     opacity: 0.75;
 }
 
-
-.btn {
-  font-size: 20px;
-  background-color: orangered;
-  color: white;
-  padding: 8px;
-  width: 50%;
-  text-align: center;
-  text-decoration: none;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  display: inline-block;
-  margin-top: 50px;
-}
-
-.btn:hover {
-  opacity: 0.75;
-}
-
 .btn-register {
   margin-top: 10px;
 }
