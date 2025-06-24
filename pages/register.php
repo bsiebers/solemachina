@@ -12,7 +12,7 @@
 
     <body>
   
-<!--#include virtual="/includes/html/header.html" -->
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/includes/html/header.php'; ?>
 
         <main>
             <div class="main-content">
@@ -37,7 +37,7 @@
             </div>
         </main>
 
-<!--#include virtual="/includes/html/footer.html" -->
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/includes/html/footer.html'; ?>
 
     </body>
 </html>

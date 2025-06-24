@@ -40,7 +40,7 @@ unset($_SESSION['error']);
             <p>of</p>
         </form>
 
-        <a href="register.shtml" class="btn btn-register">Maak een account aan</a>
+        <a href="register.php" class="btn btn-register">Maak een account aan</a>
     </div>
 </main>
 
