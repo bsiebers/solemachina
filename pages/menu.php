@@ -28,11 +28,12 @@ foreach ($products as $product) {
 
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/includes/html/header.php'; ?>
 
-<main class="menu-wrapper">
-  <?php foreach ($groupedByType as $type => $items): ?>
-    <section class="menu-category">
-      <h2><?= htmlspecialchars($type) ?></h2>
-      <div class="product-grid">
+<main>
+  <div class="menu-wrapper">
+    <?php foreach ($groupedByType as $type => $items): ?>
+      <section class="menu-category">
+        <h2><?= htmlspecialchars($type) ?></h2>
+        <div class="product-grid">
         <?php foreach ($items as $product): ?>
           <div class="product-card">
             <img src="/public/images/<?= strtolower(str_replace(' ', '-', $product->name)) ?>.jpg" alt="<?= htmlspecialchars($product->name) ?>">
@@ -53,6 +54,7 @@ foreach ($products as $product) {
       </div>
     </section>
   <?php endforeach; ?>
+  </div>
 </main>
 
 

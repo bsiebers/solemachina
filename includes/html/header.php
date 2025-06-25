@@ -1,6 +1,10 @@
 <?php
-session_start();
 require_once $_SERVER['DOCUMENT_ROOT'] . '/classes/Cart.php';
+
+echo '<pre style="background-color:white; color:black; padding:10px;">';
+var_dump($_SESSION);
+echo '</pre>';
+
 $cartCount = Cart::count();
 ?>
 

@@ -8,6 +8,12 @@ class Cart {
         $_SESSION['cart'][$productName] = ($_SESSION['cart'][$productName] ?? 0) + 1;
     }
 
+    public static function remove($productName) {
+    if (isset($_SESSION['cart'][$productName])) {
+        unset($_SESSION['cart'][$productName]);
+    }
+    }
+
     public static function count() {
         return isset($_SESSION['cart']) ? array_sum($_SESSION['cart']) : 0;
     }

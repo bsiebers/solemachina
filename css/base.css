@@ -7,13 +7,14 @@ body {
   display: flex;
   flex-direction: column;
   font-family: Arial, sans-serif;
-  background-color: white;
+  background-color: black;
 }
 
 main {
   background: white;
   color: black;
   flex: 1;
+  width: 100%;
 }
 
 .btn {

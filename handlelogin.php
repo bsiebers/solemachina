@@ -43,6 +43,15 @@ $_SESSION['user'] = [
     'role' => $user['role']
 ];
 
-header('Location: pages/index.php');
+
+if (isset($_SESSION['redirect_after_login'])) {
+    $redirect = $_SESSION['redirect_after_login'];
+    unset($_SESSION['redirect_after_login']);
+    header("Location: $redirect");
+    exit;
+}
+
+header('Location: /pages/index.php');
 exit;
+
 ?>
