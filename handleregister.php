@@ -41,6 +41,7 @@ if ($stmt->execute([$email, $hash, $firstname, $lastname,'klant', $address])) {
         'firstname' => $firstname,
         'lastname' => $lastname,
         'role' => 'klant'
+        'adress' => $address
     ];
     
     header('Location: pages/index.php');

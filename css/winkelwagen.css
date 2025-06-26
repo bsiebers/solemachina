@@ -1,3 +1,4 @@
+
 .checkout-wrapper {
   width: 80%;
   margin: 2rem auto;
@@ -39,6 +40,23 @@
   width: 100%;
 }
 
+.checkout-form input,
+.checkout-form select {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+
+.checkout-form select {
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  background-color: white;
+}
+
+
 .summary-box {
   text-align: center;
 }
@@ -47,3 +65,52 @@
   margin-bottom: 2rem;
   font-size: 1rem;
 }
+
+.summary-item {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.bestelling-lijst {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 400px;
+}
+
+.bestelling-lijst li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.bestelling-lijst li .product-info {
+  flex: 1;
+}
+
+.bestelling-lijst li .product-subtotaal {
+  white-space: nowrap;
+  margin-left: 1rem;
+  font-weight: bold;
+}
+
+.product-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.remove-form {
+  margin: 0;
+}
+
+.remove-form button {
+  background: none;
+  border: none;
+  color: red;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+

@@ -40,7 +40,8 @@ $_SESSION['user'] = [
     'email' => $user['username'],
     'firstname' => $user['first_name'],
     'lastname' => $user['last_name'],
-    'role' => $user['role']
+    'role' => $user['role'],
+    'address' => $user['address']
 ];
 
 
