@@ -54,5 +54,18 @@ class OrderRepository {
     public function removeProductFromOrder(int $orderId, string $productName): bool {
     $stmt = $this->conn->prepare("DELETE FROM Pizza_Order_Product WHERE order_id = ? AND product_name = ?");
     return $stmt->execute([$orderId, $productName]);
-}
+    }
+
+    public function getOrdersByEmail(string $email): array {
+    $stmt = $this->conn->prepare("
+        SELECT * FROM Pizza_Order
+        WHERE client_username = ?
+        ORDER BY order_id DESC
+    ");
+    $stmt->execute([$email]);
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+
+
 }

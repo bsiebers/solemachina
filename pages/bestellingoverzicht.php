@@ -89,6 +89,7 @@ $statusColor = OrderStatus::getColor((int) $order['status']);
     </section>
 
     <section class="order-support">
+      <h2> Hulp nodig?</h2>
       <p>Is er iets mis?<br>Neem contact op</p>
       <a href="#contact" class="btn">Contact opnemen</a>
     </section>

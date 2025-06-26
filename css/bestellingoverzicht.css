@@ -4,7 +4,6 @@
   color: black;
 }
 
-/* Secties */
 .order-status,
 .order-summary,
 .order-support {
@@ -15,7 +14,6 @@
   text-align: center;
 }
 
-/* Statusbolletje */
 .status-indicator {
   width: 30px;
   height: 30px;
@@ -24,7 +22,6 @@
   margin: 1rem auto;
 }
 
-/* Statuskleuren zoals door PHP gegenereerd */
 .status-indicator.oranje {
   background-color: orange;
 }

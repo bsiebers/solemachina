@@ -20,7 +20,7 @@ session_start();
         <main>
             <div class="main-content">
             <div class="hero-banner">
-                <a href="menu.html"><img src="../public/images/herobanner.png" alt="Pizzeria Sole Machina Banner" class="banner-image"></a>
+                <a href="menu.php"><img src="../public/images/herobanner.png" alt="Pizzeria Sole Machina Banner" class="banner-image"></a>
             </div>
             <section id="over-ons">
             <h1>Over Pizzeria Sole Machina</h1>

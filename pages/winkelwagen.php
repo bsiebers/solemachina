@@ -56,6 +56,7 @@ $productMap = $repo->getByNames(array_keys($cartItems));
         <input type="text" name="opmerking" placeholder="Opmerking">
 
         <select name="delivery_time" required>
+          <option value="">-- Kies een bezorgtijd --</option>
           <?php foreach ($deliveryTimes as $time): ?>
             <option value="<?= htmlspecialchars($time) ?>"><?= htmlspecialchars($time) ?></option>
           <?php endforeach; ?>
@@ -75,19 +76,14 @@ $productMap = $repo->getByNames(array_keys($cartItems));
                 $totaal += $subtotaal;
             ?>
               <li>
-      <span class="product-info">
-      <?= htmlspecialchars($amount) ?>× <?= htmlspecialchars($name) ?>
-    </span>
-   <span class="product-subtotaal">
-    €<?= number_format($subtotaal, 2, ',', '.') ?>
-    <form method="post" action="/remove-from-cart.php" class="remove-form">
-      <input type="hidden" name="product" value="<?= htmlspecialchars($name) ?>">
-      <button type="submit">✕</button>
-    </form>
-  </span>
-  </li>
-  <?php endforeach; ?>
-
+                <span class="product-info">
+                  <?= htmlspecialchars($amount) ?>× <?= htmlspecialchars($name) ?>
+                </span>
+                <span class="product-subtotaal">
+                  €<?= number_format($subtotaal, 2, ',', '.') ?>
+                </span>
+              </li>
+            <?php endforeach; ?>
           </ul>
 
           <p><strong>Totaal: €<?= number_format($totaal, 2, ',', '.') ?></strong></p>
@@ -99,8 +95,24 @@ $productMap = $repo->getByNames(array_keys($cartItems));
         </div>
       </section>
     </form>
+    
+    <section class="remove-items">
+      <h2>Producten verwijderen</h2>
+      <ul class="verwijder-lijst">
+        <?php foreach ($cartItems as $name => $amount): ?>
+          <li>
+            <form method="post" action="/remove-from-cart.php" class="remove-form" onsubmit="return confirm('Verwijder <?= htmlspecialchars($name) ?> uit de winkelwagen?');">
+              <input type="hidden" name="product" value="<?= htmlspecialchars($name) ?>">
+              <button type="submit" class="btn-small">✕ <?= htmlspecialchars($name) ?></button>
+            </form>
+          </li>
+        <?php endforeach; ?>
+      </ul>
+    </section>
   </div>
 </main>
+
+
 
 
 

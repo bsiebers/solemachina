@@ -3,7 +3,7 @@ version: "3.8"
 services:
   web:
     build:
-      context: .         # zoekt naar 'Dockerfile' in root
+      context: .         
     container_name: solemachina-web
     ports:
       - "8080:80"

@@ -1,10 +1,5 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . '/classes/Cart.php';
-
-echo '<pre style="background-color:white; color:black; padding:10px;">';
-var_dump($_SESSION);
-echo '</pre>';
-
 $cartCount = Cart::count();
 ?>
 
@@ -19,13 +14,14 @@ $cartCount = Cart::count();
     <nav class="nav-links">
       <a href="/pages/menu.php">Menu</a>
       <a href="#contact">Contact</a>
-      <a href="#over-ons">Over ons</a>
+      <a href="/pages/index.php#over-ons">Over ons</a>
 
       <?php if (isset($_SESSION['user'])): ?>
-        <div class="login-link">
+        <a href="/pages/profiel.php" class="login-link">
           <img src="/public/images/account.png" alt="Account icoon" class="login-icon">
           <span><?= htmlspecialchars($_SESSION['user']['firstname']) ?></span>
-        </div>
+        </a>
+
       <?php else: ?>
         <a href="/pages/login.php" class="login-link">
           <img src="/public/images/account.png" alt="Login icoon" class="login-icon">
