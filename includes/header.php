@@ -6,7 +6,7 @@ $cartCount = Cart::count();
 <header>
   <div class="navbar">
     <div class="logo">
-      <a href="/pages/index.php">
+      <a href="/index.php">
         <img class="logo-img" src="/public/images/logo.png" alt="Pizzeria Sole Machina Logo">
       </a>
     </div>
@@ -14,7 +14,7 @@ $cartCount = Cart::count();
     <nav class="nav-links">
       <a href="/pages/menu.php">Menu</a>
       <a href="#contact">Contact</a>
-      <a href="/pages/index.php#over-ons">Over ons</a>
+      <a href="/index.php#over-ons">Over ons</a>
 
       <?php if (isset($_SESSION['user'])): ?>
         <a href="/pages/profiel.php" class="login-link">
@@ -43,7 +43,7 @@ $cartCount = Cart::count();
               <?php foreach (Cart::getItems() as $name => $amount): ?>
                 <li>
                   <?= htmlspecialchars($name) ?> (<?= $amount ?>)
-                  <form method="post" action="/remove-from-cart.php" class="remove-form">
+                  <form method="post" action="/src/remove-from-cart.php" class="remove-form">
                     <input type="hidden" name="product" value="<?= htmlspecialchars($name) ?>">
                     <button type="submit">✕</button>
                   </form>
@@ -60,7 +60,7 @@ $cartCount = Cart::count();
       <?php endif; ?>
 
       <?php if (isset($_SESSION['user'])): ?>
-        <a href="/handlelogout.php" class="login-link">Uitloggen</a>
+        <a href="/src/handlelogout.php" class="login-link">Uitloggen</a>
       <?php endif; ?>
     </nav>
   </div>

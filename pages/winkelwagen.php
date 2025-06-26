@@ -32,13 +32,13 @@ $productMap = $repo->getByNames(array_keys($cartItems));
 
 <body>
 
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/includes/html/header.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/includes//header.php'; ?>
 
 <main>
   <div class="checkout-wrapper">
     <h1>Afrekenen</h1>
 
-    <form class="checkout-form" method="post" action="/verwerk-bestelling.php">
+    <form class="checkout-form" method="post" action="/src/verwerk-bestelling.php">
       <section class="checkout-section">
         <h2>Bestelgegevens</h2>
 
@@ -101,7 +101,7 @@ $productMap = $repo->getByNames(array_keys($cartItems));
       <ul class="verwijder-lijst">
         <?php foreach ($cartItems as $name => $amount): ?>
           <li>
-            <form method="post" action="/remove-from-cart.php" class="remove-form" onsubmit="return confirm('Verwijder <?= htmlspecialchars($name) ?> uit de winkelwagen?');">
+            <form method="post" action="/src/remove-from-cart.php" class="remove-form" onsubmit="return confirm('Verwijder <?= htmlspecialchars($name) ?> uit de winkelwagen?');">
               <input type="hidden" name="product" value="<?= htmlspecialchars($name) ?>">
               <button type="submit" class="btn-small">✕ <?= htmlspecialchars($name) ?></button>
             </form>
@@ -116,7 +116,7 @@ $productMap = $repo->getByNames(array_keys($cartItems));
 
 
 
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/includes/html/footer.html'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/includes//footer.html'; ?>
 
 </body>
 </html>

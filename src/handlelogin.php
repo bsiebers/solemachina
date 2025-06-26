@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'database/db-connection.php'; 
+require_once '../database/db-connection.php'; 
 
 $db = new Database();
 $pdo = $db->getConnection();
@@ -52,7 +52,7 @@ if (isset($_SESSION['redirect_after_login'])) {
     exit;
 }
 
-header('Location: /pages/index.php');
+header('Location: /index.php');
 exit;
 
 ?>

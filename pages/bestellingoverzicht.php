@@ -54,7 +54,7 @@ $statusColor = OrderStatus::getColor((int) $order['status']);
 
 <body>
 
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/includes/html/header.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/includes//header.php'; ?>
 
 <main>
   <div class="order-overview-wrapper">
@@ -97,7 +97,7 @@ $statusColor = OrderStatus::getColor((int) $order['status']);
   </div>
 </main>
 
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/includes/html/footer.html'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/includes//footer.html'; ?>
 
 </body>
 </html>

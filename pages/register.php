@@ -12,11 +12,11 @@
 
     <body>
   
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/includes/html/header.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/includes//header.php'; ?>
 
         <main>
             <div class="main-content">
-            <form method="post" action="/handleregister.php">
+            <form method="post" action="/src/handleregister.php">
                 <h1>Account maken</h1>
                 <input type="email" name="email" placeholder="E-mailadres" required>
                 <input type="password" name="password" placeholder="Wachtwoord" required>
@@ -37,7 +37,7 @@
             </div>
         </main>
 
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/includes/html/footer.html'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/includes//footer.html'; ?>
 
     </body>
 </html>

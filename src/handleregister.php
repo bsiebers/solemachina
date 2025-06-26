@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'database/db-connection.php'; 
+require_once '../database/db-connection.php'; 
 
 $db = new Database();
 $pdo = $db->getConnection();
@@ -44,7 +44,7 @@ if ($stmt->execute([$email, $hash, $firstname, $lastname,'klant', $address])) {
         'adress' => $address
     ];
     
-    header('Location: pages/index.php');
+    header('Location: /index.php');
     exit;
 
 } else {

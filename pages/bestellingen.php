@@ -27,7 +27,7 @@ $orders = $statusFilter ? $repo->getOrdersByStatus($statusFilter) : $repo->getAl
 </head>
 <body>
 
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/includes/html/header.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/includes//header.php'; ?>
 
 <main>
   <div class="order-list-wrapper">
@@ -72,7 +72,7 @@ $orders = $statusFilter ? $repo->getOrdersByStatus($statusFilter) : $repo->getAl
 
               <div class="order-actions">
                 <?php if ($status < 3): ?>
-                  <form method="get" action="/update-order-status.php" class="status-update-form">
+                  <form method="get" action="/src/update-order-status.php" class="status-update-form">
                     <input type="hidden" name="id" value="<?= $order['order_id'] ?>">
                     <button type="submit" class="status-update-button" title="Volgende status">
                       ➜
@@ -95,7 +95,7 @@ $orders = $statusFilter ? $repo->getOrdersByStatus($statusFilter) : $repo->getAl
 </main>
 
 
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/includes/html/footer.html'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/includes//footer.html'; ?>
 
 </body>
 </html>

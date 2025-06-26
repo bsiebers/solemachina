@@ -37,13 +37,13 @@ if (!$order) {
 </head>
 <body>
 
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/includes/html/header.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/includes//header.php'; ?>
 
 <main>
   <div class="order-edit-wrapper">
     <h1>Bestelling #<?= htmlspecialchars($order['order_id']) ?> bewerken</h1>
 
-    <form method="post" action="/update-bestelling.php">
+    <form method="post" action="/src/update-bestelling.php">
       <input type="hidden" name="order_id" value="<?= $orderId ?>">
 
       <label for="status">Status:</label>
@@ -74,7 +74,7 @@ if (!$order) {
     <ul class="verwijder-lijst">
       <?php foreach ($producten as $item): ?>
         <li>
-          <form method="post" action="/verwijder-product-uit-bestelling.php" onsubmit="return confirm('Verwijder dit product uit de bestelling?');" style="display:inline;">
+          <form method="post" action="/src/verwijder-product-uit-bestelling.php" onsubmit="return confirm('Verwijder dit product uit de bestelling?');" style="display:inline;">
             <input type="hidden" name="order_id" value="<?= $orderId ?>">
             <input type="hidden" name="product_name" value="<?= htmlspecialchars($item['name']) ?>">
             <button type="submit" class="btn-small">✕ <?= htmlspecialchars($item['name']) ?></button>
@@ -87,7 +87,7 @@ if (!$order) {
 
 
 
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/includes/html/footer.html'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/includes//footer.html'; ?>
 
 </body>
 </html>

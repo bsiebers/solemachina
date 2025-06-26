@@ -19,7 +19,7 @@ unset($_SESSION['error']);
 
 <body>
 
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/includes/html/header.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/includes//header.php'; ?>
 
 <main>
     <div class="main-content">
@@ -28,7 +28,7 @@ unset($_SESSION['error']);
             <p class="error"><?= htmlspecialchars($error) ?></p>
         <?php endif; ?>
 
-        <form method="post" action="/handlelogin.php">
+        <form method="post" action="../src/handlelogin.php">
             <label for="email">E-mail:</label>
            <input type="email" id="email" name="email" placeholder="Vul je e-mail in" value="<?= htmlspecialchars($oldEmail) ?>" required>
 
@@ -44,7 +44,7 @@ unset($_SESSION['error']);
     </div>
 </main>
 
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/includes/html/footer.html'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/includes//footer.html'; ?>
 
 </body>
 </html>

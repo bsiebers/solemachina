@@ -26,7 +26,7 @@ foreach ($products as $product) {
 
 <body>
 
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/includes/html/header.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/includes//header.php'; ?>
 
 <main>
   <div class="menu-wrapper">
@@ -43,7 +43,7 @@ foreach ($products as $product) {
              <span class="product-ingredients"><?= htmlspecialchars(implode(', ', $product->ingredients)) ?></span>
             <span class="product-price">€<?= number_format($product->price, 2, ',', '.') ?></span>
             </div>
-              <form method="POST" action="/add-to-cart.php" class="add-to-cart-form">
+              <form method="POST" action="/src/add-to-cart.php" class="add-to-cart-form">
                 <input type="hidden" name="product" value="<?= htmlspecialchars($product->name) ?>">
                 <input type="hidden" name="price" value="<?= htmlspecialchars($product->price) ?>">
                 <button type="submit" class="btn">Toevoegen</button>
@@ -59,4 +59,4 @@ foreach ($products as $product) {
 
 
 
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/includes/html/footer.html'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/includes//footer.html'; ?>

@@ -15,7 +15,7 @@ session_start();
 
     <body>
   
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/includes/html/header.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/includes//header.php'; ?>
 
         <main>
             <div class="main-content">
@@ -50,7 +50,7 @@ session_start();
         </div>
         </main>
 
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/includes/html/footer.html'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/includes//footer.html'; ?>
 
     </body>
 </html>
