@@ -59,6 +59,10 @@ $cartCount = Cart::count();
         <?php endif; ?>
       </div>
 
+      <?php if (isset($_SESSION['user']) && $_SESSION['user']['role'] === 'medewerker'): ?>
+        <a href="/pages/bestellingen.php" class="login-link">Bestellingen</a>
+      <?php endif; ?>
+
       <?php if (isset($_SESSION['user'])): ?>
         <a href="/handlelogout.php" class="login-link">Uitloggen</a>
       <?php endif; ?>

@@ -40,7 +40,7 @@ if ($stmt->execute([$email, $hash, $firstname, $lastname,'klant', $address])) {
         'email' => $email,
         'firstname' => $firstname,
         'lastname' => $lastname,
-        'role' => 'klant'
+        'role' => 'klant',
         'adress' => $address
     ];
     

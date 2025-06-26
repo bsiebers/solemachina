@@ -13,7 +13,6 @@ if (!isset($_SESSION['user']) || !isset($_GET['order_id'])) {
 $orderId = (int) $_GET['order_id'];
 $conn = Database::getConnection();
 
-// Haal bestelling op
 $stmt = $conn->prepare("SELECT * FROM Pizza_Order WHERE order_id = ?");
 $stmt->execute([$orderId]);
 $order = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -22,7 +21,6 @@ if (!$order) {
     exit('Bestelling niet gevonden.');
 }
 
-// Haal producten op
 $stmt = $conn->prepare("
     SELECT product_name, quantity 
     FROM Pizza_Order_Product 
@@ -31,7 +29,6 @@ $stmt = $conn->prepare("
 $stmt->execute([$orderId]);
 $productRows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-// Prijzen ophalen via ProductRepository
 $repo = new ProductRepository();
 $allProducts = $repo->getAll();
 $productMap = [];
@@ -39,7 +36,6 @@ foreach ($allProducts as $product) {
     $productMap[$product->name] = $product;
 }
 
-// Status info
 $statusText = OrderStatus::getLabel((int) $order['status']);
 $statusColor = OrderStatus::getColor((int) $order['status']);
 ?>
