@@ -4,6 +4,13 @@
   color: black;
 }
 
+.order-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
 .order-list-wrapper h1 {
   text-align: center;
   font-size: 2rem;
@@ -23,9 +30,6 @@
   padding: 1.5rem 2rem;
   width: 100%;
   max-width: 500px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
@@ -47,11 +51,7 @@
 .bestelling-lijst li {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 0.25rem;
-}
-
-.product-info {
-  flex: 1;
+  align-items: center;
 }
 
 .product-subtotaal {
@@ -65,7 +65,7 @@
   border-radius: 50%;
   display: inline-block;
   margin-left: 1rem;
-  margin-top: 0.5rem;
+  flex-shrink: 0;
 }
 
 .oranje {
@@ -110,6 +110,46 @@
   padding: 0.5rem;
   font-size: 1rem;
   border-radius: 4px;
+}
+
+.order-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.status-update-button,
+.view-order-button {
+  background-color: #333;
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.view-order-button:hover,
+.status-update-button:hover {
+  background-color: #555;
+}
+
+.status-update-button,
+.view-order-button {
+  background-color: orangered;
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.status-update-button:hover,
+.view-order-button:hover {
+  background-color: #d64000; /* iets donkerder bij hover */
 }
 
 

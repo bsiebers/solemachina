@@ -42,5 +42,17 @@ class OrderRepository {
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    public function updateProductQuantity(int $orderId, string $productName, int $quantity): bool {
+    $stmt = $this->conn->prepare("
+        UPDATE Pizza_Order_Product
+        SET quantity = ?
+        WHERE order_id = ? AND product_name = ?
+    ");
+    return $stmt->execute([$quantity, $orderId, $productName]);
+    }
 
+    public function removeProductFromOrder(int $orderId, string $productName): bool {
+    $stmt = $this->conn->prepare("DELETE FROM Pizza_Order_Product WHERE order_id = ? AND product_name = ?");
+    return $stmt->execute([$orderId, $productName]);
+}
 }

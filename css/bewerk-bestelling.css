@@ -1,0 +1,99 @@
+.order-edit-wrapper {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #f8f8f8;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+}
+
+.order-edit-wrapper h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.order-edit-wrapper h2 {
+  font-size: 1.4rem;
+  margin: 1.5rem 0 1rem;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 0.5rem;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+select,
+input[type="number"] {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  max-width: 100%;
+}
+
+.producten-lijst,
+.verwijder-lijst {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.producten-lijst li,
+.verwijder-lijst li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.producten-lijst li input[type="number"] {
+  width: 80px;
+  margin-left: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  width: 100%;
+  padding: 0.8rem;
+  background-color: orangered;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  transition: background-color 0.2s;
+}
+
+.btn:hover {
+  background-color: #cc3700;
+}
+
+.btn-small {
+  background-color: #ccc;
+  border: none;
+  padding: 0.4rem 0.7rem;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+.btn-small:hover {
+  background-color: #bbb;
+}
+
+.inline-form {
+  display: inline;
+}
+
+.verwijder-lijst li form {
+  display: inline-block;
+  margin: 0.3rem 0;
+}
